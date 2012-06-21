@@ -10,10 +10,10 @@ describe('About Backbone.Events', function() {
     it('Any regular javascript object can be extended with custom event functionality.', function() {
         var basicObject = {};
 
-        _.extend(basicObject, Backbone.Events);
-
         // How would you get these Backbone.Events functions added to basicObject?
         // Hint: http://documentcloud.github.com/backbone/#Events
+
+        _.extend(basicObject, Backbone.Events);
 
         expect(typeof basicObject.bind).toEqual('function');
         expect(typeof basicObject.unbind).toEqual('function');
